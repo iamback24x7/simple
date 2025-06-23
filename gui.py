@@ -8,14 +8,14 @@ import os
 import time
 from datetime import datetime
 import logging
+import sys
 
-# Configure logging
 logging.basicConfig(
     level=logging.INFO,
     format='[%(asctime)s] %(levelname)s: %(message)s',
     handlers=[
-        logging.StreamHandler('backlink.log'),
-        logging.StreamHandler()  # Console handler
+        logging.FileHandler("backlink.log", mode='a'),
+        logging.StreamHandler(sys.stdout)
     ]
 )
 logger = logging.getLogger(__name__)
