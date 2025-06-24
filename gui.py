@@ -14,7 +14,8 @@ logging.basicConfig(
     level=logging.INFO,
     format='[%(asctime)s] %(levelname)s: %(message)s',
     handlers=[
-        logging.StreamHandler(sys.stdout)  # Only log to terminal
+        logging.FileHandler("prathyoush.log", mode='a'), # REMOVE THIS LINE
+        logging.StreamHandler(sys.stdout)
     ]
 )
 logger = logging.getLogger(__name__)
