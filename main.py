@@ -36,7 +36,7 @@ FORM_FIELD_MAPPINGS = config.get("form_field_mappings", {
     "url": ["url", "website", "site"]
 })
 SUCCESS_FILE = config.get("success_file", "success.txt")
-MAX_WORKERS = config.get("max_workers", 8)
+MAX_WORKERS = config.get("max_workers", 1) #good
 
 # ==========================
 # LOAD POST DATA & LINKS
